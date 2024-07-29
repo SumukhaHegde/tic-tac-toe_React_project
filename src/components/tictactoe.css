@@ -1,0 +1,14 @@
+.board {
+}
+
+.header-text {
+  display: flex;
+  gap: 5px;
+  padding: 3px;
+}
+
+.game-board-area {
+  display: grid;
+  max-width: calc(3 * 100px);
+  grid-template-columns: repeat(3px 1fr);
+}
