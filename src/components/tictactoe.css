@@ -10,5 +10,5 @@
 .game-board-area {
   display: grid;
   max-width: calc(3 * 100px);
-  grid-template-columns: repeat(3 1fr);
+  grid-template-columns: repeat(3, 1fr);
 }
