@@ -8,7 +8,15 @@
 }
 
 .game-board-area {
+  border: 1px solid black;
   display: grid;
+  height: 300px;
+  max-height: calc(3 * 100px);
   max-width: calc(3 * 100px);
+  grid-template-rows: repeat(3, 1fr);
   grid-template-columns: repeat(3, 1fr);
+}
+
+game-board-area > button {
+  padding: 5px;
 }
