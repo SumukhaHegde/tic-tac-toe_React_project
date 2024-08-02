@@ -7,11 +7,10 @@ const InitializeBoard = () => {
 
 const Tictactoe = () => {
   const [board, setBoard] = useState(InitializeBoard());
-  const [text, setText] = useState("");
   const [isPlayerXturn, setIsPlayerXTurn] = useState(true);
 
   const handleBoardClick = (boardIndex) => {
-    isPlayerXturn ? setText("X") : setText("O");
+    board[boardIndex] = isPlayerXturn ? "X" : "O";
     setIsPlayerXTurn(!isPlayerXturn);
   };
   return (
@@ -21,8 +20,12 @@ const Tictactoe = () => {
         <button>Reset Game</button>
       </div>
       <div className="game-board-area">
-        {board.map((_, index) => {
-          return <button onClick={() => handleBoardClick(index)}>{}</button>;
+        {board.map((b, index) => {
+          return (
+            <button onClick={() => handleBoardClick(index)} key={index}>
+              {b}
+            </button>
+          );
         })}
       </div>
     </div>
