@@ -6,13 +6,6 @@ const InitializeBoard = () => {
 };
 
 const Tictactoe = () => {
-  const [board, setBoard] = useState(InitializeBoard());
-  const [isPlayerXturn, setIsPlayerXTurn] = useState(true);
-
-  const handleBoardClick = (boardIndex) => {
-    board[boardIndex] = isPlayerXturn ? "X" : "O";
-    setIsPlayerXTurn(!isPlayerXturn);
-  };
   return (
     <div className="board">
       <div className="header-text">
@@ -22,7 +15,11 @@ const Tictactoe = () => {
       <div className="game-board-area">
         {board.map((b, index) => {
           return (
-            <button onClick={() => handleBoardClick(index)} key={index}>
+            <button
+              onClick={() => handleBoardClick(index)}
+              key={index}
+              disabled={b !== null}
+            >
               {b}
             </button>
           );
