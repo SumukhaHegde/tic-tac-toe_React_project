@@ -10,10 +10,6 @@ const useTicTacToe = () => {
 
   const handleBoardButtonClick = () => {};
 
-  const getGameBoard = () => {
-    return board;
-  };
-
   const setGameBoard = () => {
     setBoard(board);
   };
