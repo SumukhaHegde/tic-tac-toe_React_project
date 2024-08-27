@@ -6,8 +6,6 @@ function App() {
   return (
     <div>
       <Tictactoe />
-      <Tictactoe />
-
     </div>
   );
 }
